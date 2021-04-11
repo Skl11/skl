@@ -33,7 +33,7 @@ class Qiwi:
         request.headers["authorization"] = "Bearer " + self.token
         params_get = {"rows": 10, "operation": "IN"}
         qiwi_get = request.get(
-            "https://edge.qiwi.com/payment-history/v2/persons/" + self.num + "/payments",
+            f"https://edge.qiwi.com/payment-history/v2/persons/{self.num}/payments",
             params=params_get)
         qiwi_get = qiwi_get.json()["data"]
 

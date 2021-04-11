@@ -471,7 +471,6 @@ class ShopDB:
             cur.execute("SELECT * FROM Qiwi")
             while True:
                 row = cur.fetchone()
-                old_num = row[0]
                 if row is None:
                     break
                 old_num = row[0]
